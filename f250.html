@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        figure {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        figure:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        figure:hover img {
+            transform: scale(1.05);
+        }
+
+        figcaption {
+            padding: 20px;
+            background: white;
+        }
+
+        .titulo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .descricao {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .galeria {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            figcaption {
+                padding: 15px;
+            }
+
+            .titulo {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📸 Minha Galeria de Fotos</h1>
+        
+        <div class="galeria">
+            <figure>
+                <img src="https://picsum.photos/id/1015/400/300" alt="Paisagem montanhosa">
+                <figcaption>
+                    <span class="titulo">Montanhas Majestosas</span>
+                    <span class="descricao">Uma vista impressionante das montanhas cobertas de neve sob um céu azul cristalino. Perfeito para os amantes da natureza e aventura.</span>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://picsum.photos/id/104/400/300" alt="Lago tranquilo">
+                <figcaption>
+                    <span class="titulo">Lago Sereno</span>
+                    <span class="descricao">Águas calmas refletindo as montanhas ao redor, criando um cenário de paz e tranquilidade. Ideal para momentos de meditação.</span>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://picsum.photos/id/106/400/300" alt="Flores coloridas">
+                <figcaption>
+                    <span class="titulo">Jardim Florido</span>
+                    <span class="descricao">Flores vibrantes em cores intensas que trazem vida e alegria ao ambiente. A beleza da natureza em sua forma mais pura.</span>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://picsum.photos/id/20/400/300" alt="Praia paradisíaca">
+                <figcaption>
+                    <span class="titulo">Paraíso Tropical</span>
+                    <span class="descricao">Areia branca e águas cristalinas formam o cenário perfeito para relaxar e aproveitar o melhor do verão.</span>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://picsum.photos/id/30/400/300" alt="Caminho na floresta">
+                <figcaption>
+                    <span class="titulo">Trilha na Floresta</span>
+                    <span class="descricao">Um caminho cercado por árvores centenárias que convida à exploração e ao contato com a natureza selvagem.</span>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://picsum.photos/id/42/400/300" alt="Pôr do sol">
+                <figcaption>
+                    <span class="titulo">Pôr do Sol Espetacular</span>
+                    <span class="descricao">Cores quentes pintam o céu ao entardecer, criando um espetáculo único e inesquecível.</span>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</body>
+</html>
